@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-  <div class="grid grid-cols-12 relative">
+  <div class="grid grid-cols-12 relative bg-neutral-200">
     <div class="col-span-full">
       <router-view></router-view>
     </div>
