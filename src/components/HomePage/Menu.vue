@@ -188,7 +188,7 @@ const items = [
     </div>
     <!-- home -->
     <div v-for="item in items" :key="item.label">
-      <div class="flex py-3 items-center justify-between cursor-pointer transition-all duration-150 hover:bg-[#16133f] px-3">
+      <div :class="[item.label === 'خانه' ? 'bg-[#16133f]' : '']" class="flex py-3 items-center justify-between cursor-pointer transition-all duration-150 hover:bg-neutral-400 px-3">
         <div class=" flex items-center gap-3">
           <span v-html="item.icon"></span>
           <p>{{ item.label }}</p>
