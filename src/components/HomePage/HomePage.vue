@@ -1,6 +1,5 @@
 <script setup>
 import InfoCart from "./InfoCart.vue";
-import Menu from "./Menu.vue";
 import SmalCart from "./SmalCart.vue";
 
 const tabs = ["همه", "اطلاعیه ها", "درنگی نورانی", "سرمایه انسانی", "اخبار فضای مجازی", "پینگ", "محفل تخصصی", "ضوابط حراست", "آیین نامه ها و ضوابط", "سرخط", "فناوری اطلاعات"];
@@ -48,11 +47,7 @@ const cards = [
 ];
 </script>
 <template>
-  <div class="grid grid-cols-12 gap-5 pe-5" dir="rtl">
-    <div class="col-span-2">
-      <Menu />
-    </div>
-    <div class="col-span-10 gap-5 flex-col flex pb-10">
+    <div class="w-full gap-5 flex-col flex pb-10" dir="rtl">
       <!-- navbar -->
       <div class="bg-neutral-100 rounded-b-lg shadow-lg pe-10 py-4 shadow-neutral-200 flex justify-end">
         <div class="flex items-center gap-3">
@@ -150,7 +145,6 @@ const cards = [
         </div>
       </div>
     </div>
-  </div>
 </template>
 
 <style scoped></style>

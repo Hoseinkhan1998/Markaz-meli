@@ -1,4 +1,7 @@
 <script setup>
+import { useRoute } from "vue-router";
+const route = useRoute();
+
 const items = [
   {
     icon: `<svg class="size-6" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -11,6 +14,7 @@ const items = [
           stroke-linejoin="round" />
       </svg>`,
     label: "خانه",
+    route: "/",
   },
   {
     icon: `<svg class="size-6" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -21,6 +25,7 @@ const items = [
     </svg>
 `,
     label: "گفت‌وگو",
+    route: "/chat",
   },
   {
     icon: `<svg class="size-6" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -31,6 +36,7 @@ const items = [
       <ellipse cx="11" cy="1" rx="1" ry="1" fill="white"/>
       </svg>`,
     label: "مدیر غذا",
+    route: "/foodmanagment",
   },
   {
     icon: `<svg class="size-6" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -43,6 +49,7 @@ const items = [
       <path d="M2.5 16.25L3.33333 17.0834L5.83333 14.5834" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>`,
     label: "وظایف",
+    route: "/tasks",
   },
   {
     icon: `<svg class="size-6" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -52,6 +59,7 @@ const items = [
       <path d="M14.5833 9.16663C16.6543 9.16663 18.3333 7.48769 18.3333 5.41663C18.3333 3.34556 16.6543 1.66663 14.5833 1.66663C12.5122 1.66663 10.8333 3.34556 10.8333 5.41663C10.8333 7.48769 12.5122 9.16663 14.5833 9.16663Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>`,
     label: "فرآیندها",
+    route: "/processes",
   },
 
   {
@@ -69,6 +77,7 @@ const items = [
         </svg>
       `,
     label: "تقویم",
+    route: "/calendar",
   },
   {
     icon: `<svg class="size-6" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -82,6 +91,7 @@ const items = [
         </svg>
       `,
     label: "تنخواه",
+    route: "/salary",
   },
   {
     icon: `<svg class="size-6" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -102,6 +112,7 @@ const items = [
           </defs>
           </svg>`,
     label: "کارآیی",
+    route: "/efficiency",
   },
   {
     icon: `<svg class="size-6" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -116,6 +127,7 @@ const items = [
       </svg>
  `,
     label: "برنامه ها",
+    route: "/programs",
   },
   {
     icon: `<svg class="size-6" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -136,6 +148,7 @@ const items = [
       
        `,
     label: "گزارش",
+    route: "/report",
   },
   {
     icon: `<svg class="size-6" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -147,6 +160,7 @@ const items = [
         <path d="M5.16233 7.08329H5.16982" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>`,
     label: "تخصیص ها",
+    route: "/allocations",
   },
   {
     icon: `<svg class="size-6" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -155,6 +169,7 @@ const items = [
         </svg>
         `,
     label: "قراردادها",
+    route: "/contracts",
   },
   {
     icon: `<svg class="size-6" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -165,6 +180,7 @@ const items = [
         <path d="M1.66675 18.3334H18.3334" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>`,
     label: "پرداخت",
+    route: "/payment",
   },
   {
     icon: `<svg class="size-6" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -175,6 +191,7 @@ const items = [
       </svg>
       `,
     label: "مدیر اطلاعیه",
+    route: "/announcementManager",
   },
 ];
 </script>
@@ -188,13 +205,16 @@ const items = [
     </div>
     <!-- home -->
     <div v-for="item in items" :key="item.label">
-      <div :class="[item.label === 'خانه' ? 'bg-[#16133f]' : '']" class="flex py-3 items-center justify-between cursor-pointer transition-all duration-150 hover:bg-neutral-400 px-3">
-        <div class=" flex items-center gap-3">
+      <router-link
+        :to="item.route"
+        :class="[item.route === route.path ? 'bg-[#16133f]' : '']"
+        class="flex py-3 items-center justify-between cursor-pointer transition-all duration-150 hover:bg-neutral-400 px-3">
+        <div class="flex items-center gap-3">
           <span v-html="item.icon"></span>
           <p>{{ item.label }}</p>
         </div>
-        <div class=" rounded-full w-3 h-3 blinking " v-if="item.label === 'وظایف' || item.label === 'کارآیی' || item.label === 'قراردادها'"></div>
-      </div>
+        <div class="rounded-full w-3 h-3 blinking" v-if="item.label === 'وظایف' || item.label === 'کارآیی' || item.label === 'قراردادها'"></div>
+      </router-link>
       <div v-if="item.label === 'کارآیی' || item.label === 'تخصیص ها' || item.label === 'پرداخت'" class="w-4/6 h-[1px] ms-10 bg-neutral-100"></div>
     </div>
   </div>
@@ -208,13 +228,13 @@ const items = [
 
 @keyframes blink {
   0% {
-    background-color: #C6CB2D; /* قرمز روشن */
+    background-color: #c6cb2d; /* قرمز روشن */
   }
   50% {
     background-color: #c6cb2d8f; /* قرمز تیره */
   }
   100% {
-    background-color: #C6CB2D; /* قرمز روشن */
+    background-color: #c6cb2d; /* قرمز روشن */
   }
 }
 
