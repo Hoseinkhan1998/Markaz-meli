@@ -1,14 +1,13 @@
 <script setup>
-import Menu from './components/Menu.vue';
-
+import Menu from "./components/Menu.vue";
 </script>
 
 <template>
-  <div class="grid grid-cols-12 gap-5 pe-5 bg-neutral-200" dir="rtl">
-    <div class="col-span-2">
+  <div class="bg-neutral-200 grid grid-cols-12 gap-5 px-[150px] min-h-screen" dir="rtl">
+    <div class="col-span-2 h-screen sticky top-0 self-start">
       <Menu />
     </div>
-    <div class="col-span-10 gap-5 flex-col flex pb-10">
+    <div class="col-span-10 gap-5 flex-col flex overflow-y-auto h-full">
       <router-view></router-view>
     </div>
   </div>

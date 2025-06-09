@@ -2,7 +2,7 @@
 <template>
   <div class="grid grid-cols-12 gap-10">
     <!-- task cart -->
-    <div class="col-span-4 text-neutral-900 h-[40vh] bg-neutral-100 rounded-xl cursor-pointer shadow-lg shadow-neutral-300">
+    <div class="col-span-4 text-neutral-900 h-[30vh] bg-neutral-100 rounded-xl cursor-pointer shadow-lg shadow-neutral-300">
       <div class="flex gap-5 justify-center items-center h-full flex-col">
         <div class="flex w-[20vh] h-[20vh] relative">
           <svg class="w-full h-full" viewBox="0 0 150 150" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -20,7 +20,7 @@
       </div>
     </div>
     <!-- Chat cart -->
-    <div class="col-span-4 text-neutral-900 h-[40vh] bg-neutral-100 rounded-xl cursor-pointer shadow-lg shadow-neutral-300">
+    <div class="col-span-4 text-neutral-900 h-[30vh] bg-neutral-100 rounded-xl cursor-pointer shadow-lg shadow-neutral-300">
       <div class="flex gap-5 justify-center h-full items-center flex-col">
         <div class="flex w-[20vh] h-[20vh] relative">
           <svg class="w-full h-full" viewBox="0 0 150 150" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -51,7 +51,7 @@
       </div>
     </div>
     <!-- Process cart -->
-    <div class="col-span-4 text-neutral-900 h-[40vh] bg-neutral-100 rounded-xl cursor-pointer shadow-lg shadow-neutral-300">
+    <div class="col-span-4 text-neutral-900 h-[30vh] bg-neutral-100 rounded-xl cursor-pointer shadow-lg shadow-neutral-300">
       <div class="flex gap-5 justify-center h-full items-center flex-col">
         <div class="flex w-[20vh] h-[20vh] relative">
           <svg class="w-full h-full" viewBox="0 0 150 150" fill="none" xmlns="http://www.w3.org/2000/svg">

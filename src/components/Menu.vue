@@ -196,11 +196,11 @@ const items = [
 ];
 </script>
 <template>
-  <div class="flex flex-col bg-menu !pb-72 text-neutral-100 text-lg font-semibold h-full overflow-y-auto pt-10">
+  <div class="flex flex-col bg-menu text-neutral-100 text-lg font-semibold h-full overflow-y-auto pt-10">
     <!-- menu image -->
     <div class="px-3">
       <div class="flex justify-center mb-3 border-b-2 pb-5 border-neutral-400 border-solid">
-        <img src="/images/markazmenu.png" class="w-11/12" alt="" />
+        <img src="/images/markazmenu.png" class="w-9/12" alt="" />
       </div>
     </div>
     <!-- home -->
@@ -208,10 +208,10 @@ const items = [
       <router-link
         :to="item.route"
         :class="[item.route === route.path ? 'bg-[#16133f]' : '']"
-        class="flex py-3 items-center justify-between cursor-pointer transition-all duration-150 hover:bg-neutral-400 px-3">
+        class="flex py-2 items-center justify-between cursor-pointer transition-all duration-150 hover:bg-neutral-400 px-3">
         <div class="flex items-center gap-3">
           <span v-html="item.icon"></span>
-          <p>{{ item.label }}</p>
+          <p class=" text-sm">{{ item.label }}</p>
         </div>
         <div class="rounded-full w-3 h-3 blinking" v-if="item.label === 'وظایف' || item.label === 'کارآیی' || item.label === 'قراردادها'"></div>
       </router-link>
