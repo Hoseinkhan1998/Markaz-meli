@@ -71,34 +71,7 @@ const cards = [
 ];
 </script>
 <template>
-  <div class="w-full gap-5 flex-col flex pb-10 bg-neutral-200">
-    <!-- navbar -->
-    <div class="bg-neutral-100 rounded-b-lg shadow-lg pe-10 py-2 shadow-neutral-200 flex justify-end">
-      <div class="flex items-center gap-3">
-        <!-- Notification -->
-        <div class="rounded-full cursor-pointer flex border-r-[3px] p-1 border-[#17145B] border-solid">
-          <div class="flex items-center rounded-full justify-center w-7 h-7 bg-neutral-200">
-            <svg class="size-6" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M9.45486 2.56697C8.69432 1.64801 7.55827 0.971802 5.99977 0.971802C2.74783 0.971802 1.33455 3.91644 1.33455 5.86364C1.33455 7.31799 1.54578 6.89041 0.740492 8.66526C-0.243009 11.1941 3.71153 12.2282 5.99977 12.2282C8.28727 12.2282 12.2425 11.1941 11.2598 8.66526C10.4538 6.89041 10.665 7.31799 10.665 5.86364"
-                stroke="#111111"
-                stroke-linecap="round"
-                stroke-linejoin="round" />
-              <path d="M7.69377 14.2281C6.74474 15.2887 5.26399 15.3011 4.30542 14.2281" stroke="#111111" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-          </div>
-          <div class="h-2 w-2 bg-red-600 -ms-3 rounded-full"></div>
-        </div>
-        <!-- Profile -->
-        <div class="bg-neutral-200 rounded-lg px-3 py-1 flex items-center justify-center gap-3">
-          <p class="text-neutral-900 text-[10px]">محمدمهدی آقا محمدحسین تجریشی</p>
-          <!-- profile pic -->
-          <div class="border-l-[3px] p-1 border-[#17145B] rounded-full border-solid">
-            <img src="/images/Ellipse9.png" class="rounded-full h-6 w-6" alt="" />
-          </div>
-        </div>
-      </div>
-    </div>
+  <div class="w-full gap-5 flex-col flex pb-10 bg-neutral-200">        
     <!-- tabs buttons -->
     <div class="w-full flex flex-wrap gap-2">
       <div
